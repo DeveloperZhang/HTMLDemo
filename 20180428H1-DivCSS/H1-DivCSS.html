@@ -9,6 +9,16 @@
 			}
 			
 		</style>
+		<script>
+			function testClick() {
+				document.getElementById("myBtn").innerHTML="改变内容";
+			}
+			function testClick1() {
+				document.getElementById("myBtn1").value="改变内容";
+				var obj = document.getElementById("footer");
+				obj.innerHTML = "<h1>变更内容<h1>";
+			}
+		</script>
 	</head>
 	<body>
 		Hello World
@@ -29,7 +39,9 @@
 				JavaScript
 			</div>
 			<div id="content" style="float: left;background-color: #EEEEEE;height: 200px;width: 400px;">
-				内容在这里
+				内容在这里<br />
+				<button id="myBtn" type="button" onclick="testClick()" style="width: 100px; height: 30px;">我是按钮</button><br />
+				<input id="myBtn1" type="button" value="input按钮" onclick="testClick1()" style="width: 100px; height: 60px;"/>
 			</div>
 			<div id="footer" style="background-color: #FFA500;clear: both;text-align: center;">
 				版权 ©️ vicentz.cn
